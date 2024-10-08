@@ -1,0 +1,11 @@
+{
+  "builds": [{
+    "src": "djdemo/wsgi.py",
+    "use": "@vercel/python",
+    "config": {"maxLambadaSize": "15mb","runtime": "python3.9"}
+  }],
+  "routes": [{
+    "src": "/(.*)",
+    "dest": "djdemo/wsgi.py"
+  }]
+}
